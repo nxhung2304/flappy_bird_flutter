@@ -1,20 +1,12 @@
+import 'package:flame/game.dart';
+import 'package:flatppy_bird_flutter/flappy_bird/flappy_bird_game.dart';
+import 'package:flatppy_bird_flutter/screens/menu_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
-}
-
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+  // runApp(MaterialApp(
+  //   home: MenuScreen(),
+  //   debugShowCheckedModeBanner: false,
+  // ));
+  runApp(GameWidget(game: FlappyBirdGame()));
 }
