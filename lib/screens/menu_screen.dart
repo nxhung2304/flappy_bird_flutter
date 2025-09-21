@@ -7,18 +7,20 @@ class MenuScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Text('Flappy Bird'),
-          ElevatedButton(
-            onPressed:
-                () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => GameScreen()),
-                ),
-            child: Text('Start Game'),
-          ),
-        ],
+      appBar: AppBar(title: Text('Flappy Bird Menu')),
+      body: Center(
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed:
+                  () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => GameScreen()),
+                  ),
+              child: Text('Start Game'),
+            ),
+          ],
+        ),
       ),
     );
   }
